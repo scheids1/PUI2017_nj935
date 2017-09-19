@@ -2,8 +2,8 @@
 ## First step
 
 In my bash_profile, I created two things:
-*an environmental variable for 'PUI2017', pointing to my pui2017 folder.
-*an alias 'pui2017', to cd into the directory represented by the environmental variable.
+* an environmental variable for 'PUI2017', pointing to my pui2017 folder.
+* an alias 'pui2017', to cd into the directory represented by the environmental variable.
 
 ![Image 1](/NJ_screenshot1.png)
 
