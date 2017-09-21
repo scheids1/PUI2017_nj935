@@ -12,3 +12,5 @@ In my bash_profile, I created two things:
 Then I used the alias to move into the directory, and checked I was in the right place.
 
 ![Image 2](/NJ_screenshot2.png)
+
+That's everything - the environmental variable and alias are both working fine.
