@@ -1,0 +1,199 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## HW3, Assignment 3\n",
+    "\n",
+    "Nick Jones, nj935\n",
+    "Hypothesis test of whether bus speed improved"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "# Import libraries and data file\n",
+    "\n",
+    "import numpy as np\n",
+    "\n",
+    "tt = np.loadtxt(\"PUI2017/times.txt\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 31.62223931,  32.82137636,  30.2291014 ,  31.41376587,\n",
+       "        39.01055035,  34.82207891,  39.87188366,  39.57994562,\n",
+       "        31.02658678,  27.66246068,  18.8752884 ,  46.2313731 ,\n",
+       "        30.01522604,  47.6004104 ,  16.52726666,  42.4462331 ,\n",
+       "        33.62527449,  42.28462558,  46.20520667,  30.87517392])"
+      ]
+     },
+     "execution_count": 56,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tt.shape\n",
+    "tt[:20]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The current bus time performance is:\n",
+      "μ = 36\n",
+      "σ = 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "### Old bus route values:\n",
+    "\n",
+    "pop_mean = 36\n",
+    "pop_std = 6\n",
+    "\n",
+    "print(\"The current bus time performance is:\\nμ = {}\\nσ = {}\".format(pop_mean,pop_std))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Set our hypotheses to test:\n",
+    "\n",
+    "H0 (null hypothesis): New bus route timing >= old bus route timing. tNew >= tOld\n",
+    "H1 (alternative hypothesis): New bus route timing < old bus route timing. tNew < tOld.\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The new bus route has:\n",
+      " μ = 34.466\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "new_mean = tt.mean()\n",
+    "\n",
+    "print(\"The new bus route has:\\n μ = {:.3f}\\n\".format(new_mean))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# What is the probability of getting this value compared with the PDF\n",
+    "# of bus times?\n",
+    "\n",
+    "# We will test this using a z-score, which shows how many standard deviations from the mean\n",
+    "# our new sample came in at. We use a 5% significance level."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {
+    "collapsed": false,
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The new mean is 2.556 standard deviations from the population mean. This\n",
+      "exceeds our confidence interval of 5% equivalent to 2 standard deviations.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# calculate z score\n",
+    "# where z = pop_mean - sample_mean / pop_std / sqrt(N)\n",
+    "\n",
+    "z=(pop_mean-new_mean)/pop_std/np.sqrt(len(tt))\n",
+    "\n",
+    "# next report the findings:\n",
+    "\n",
+    "print('''The new mean is {:.3f} standard deviations from the population mean. This\n",
+    "exceeds our confidence interval of 5% equivalent to 2 standard deviations.'''.format(z*100))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Conclusion\n",
+    "The null hypothesis is rejected at the 5% significance level. We fail to reject the hypothesis\n",
+    "that the new bus route is quicker."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "PUI2016_Python3",
+   "language": "python",
+   "name": "pui2016_python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
