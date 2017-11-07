@@ -13,3 +13,4 @@ Multivariate logistic regression	| Occurrence of tropical cyclones in specific g
 Multiple linear regression	| Distance to clinic, gender, education, incarerated or not, age, others | Mainly continuous, some categorical (eg. gender), some discrete (eg. age) | Retention rate after 18 months for program participants (ie. do they keep taking their methadone treatment) | Continuous | Modality of methadone treatment | Categorical | What factors affect whether heroin addicts undergoing methadone treatment stick to the treatment or drop out | H0: For each factor w1 ... wn, wn=0. This is in the context of a regression equation with wn regression coefficients.  | 0.05 | [Factors Associated with Methadone Treatment Duration: A Cox Regression Analysis](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0123687)
   |||||||||
 
+# FBB good
