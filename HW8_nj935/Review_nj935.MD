@@ -1,3 +1,6 @@
+***Plot Reviewed:** https://github.com/nj935/PUI2017_nj935/tree/master/HW8_nj935 
+
+
 **CLARITY**: *****is the plot easy to read? is it clear or confusing, are the quantities being visualized ambiguous?*****
 
 The font and text size of all text are easy to read. The plot has a title and caption. The quantities are percentages with 
