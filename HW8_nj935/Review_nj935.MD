@@ -35,7 +35,7 @@ Additionally, I would imagine there are just more American restaurants in genera
 
 **IMPROVEMENTS TO EACH PLOT**
 
-All the mentioned critiques are areas of improvement. Ultimately, I think a different visualization type other than pie charts would be better. If sticking with the pie charts, I think the most important 2 improvements are: 
+All the mentioned critiques are areas of improvement. Ultimately, I think a different visualization type other than pie charts would be better. If sticking with the pie charts, I think the most important 3 improvements are: 
 
 - Make colors colorblind friendly 
 - Clarify what the quantity being plotted is
